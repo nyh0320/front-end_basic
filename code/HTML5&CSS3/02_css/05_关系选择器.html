@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子类选择器*/
+        div>span{
+            color: blue;
+        }
+        /* 后代选择器 */
+        div span{
+            color: orange;
+        }
+        /* 兄弟 */
+        p+span{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div>
+        <p>
+            <span>hh</span>
+        </p>
+        <span>gg</span>
+    </div>
+</body>
+</html>

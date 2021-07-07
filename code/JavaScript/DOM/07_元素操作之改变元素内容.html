@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p{
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color:#fff;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <p></p>
+    <script>
+        //需求：点击了按钮，div文字会变化
+        //获取元素（两个）
+        var btn=document.querySelector("button");
+        var div=document.querySelector("div");
+        //注册事件
+        btn.onclick=function(){
+            //添加事件处理程序
+            //调用函数获取当前时间（字符串格式，修改标签内容）
+            div.innerText=getDate();
+        }
+
+        //获取当前时间的函数
+        function getDate(){
+            var date=new Date();
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;//返回值是0-11
+            var dates=date.getDate();
+            var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var day=date.getDay();
+            return '今天是：'+year+'年'+month+'月'+dates+'日'+arr[day];
+        }
+
+        //打开页面即显示当前时间（不添加事件）
+        var p=document.querySelector("p");
+        p.innerText=getDate();
+    </script>
+</body>
+</html>

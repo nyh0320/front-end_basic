@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 将message属性通过v-bind绑定到title -->
+        <span v-bind:title="message">
+            查看动态绑定信息
+        </span>
+    </div>
+    
+    <!--导入vue.js-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var vm=new Vue({
+            //document.getElementById
+            el:"#app",
+            //data是调用后端接口后拿到的数据
+            data:{
+                message:"页面加载于"+new Date().toLocaleString()
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="lv">绿色</button>
+    <button id="huang">黄昏</button>
+    <img src="../images/1.png" alt="">
+
+    <script>
+        //修改元素属性src
+        //1.获取元素（三个）
+        var lv=document.getElementById("lv");
+        var huang=document.getElementById("huang");
+        var img=document.querySelector("img");
+        //2.注册事件
+        huang.onclick=function(){
+            //3.处理程序
+            img.src="../images/2.png";
+        }
+        lv.onclick=function(){
+            //3.处理程序
+            img.src="../images/1.png";
+        }
+    </script>
+</body>
+</html>

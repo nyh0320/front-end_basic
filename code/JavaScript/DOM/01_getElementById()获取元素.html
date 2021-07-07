@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2021-6-22</div>
+    <!-- 从上往下加载，先有标签，JS才能加载到 -->
+    <script type="text/javascript">
+        // 根据id获取button对象
+        var time=document.getElementById("time");
+        // 修改对象内容
+         time.innerHTML="2021-6-23";
+         console.log(time);
+         console.log(typeof time);
+         console.dir(time)
+    </script>
+</body>
+</html>

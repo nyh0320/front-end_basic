@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 判断---循环 -->
+        <h1 v-if="type==='A'">A</h1>
+        <h1 v-else-if="type==='B'">B</h1>
+        <h1 v-else="type==='C'">C</h1>
+    </div>
+    
+    <!--导入vue.js-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var vm=new Vue({
+            //document.getElementById
+            el:"#app",
+            //data是调用后端接口后拿到的数据
+            data:{
+                type:"A"
+            }
+        });
+    </script>
+</body>
+</html>
