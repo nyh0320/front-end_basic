@@ -8,27 +8,38 @@
 </head>
 <body>
     <script>
-        // window.onload=function(){
-        //     var btn=window.document.querySelector("button");
-        //     btn.onclick=function(){
-        //         alert("呵呵哒！");
-        //     }
-        // }
+        /* 
+            - window.onload是窗口加载事件，当文档内容加载完会触发该事件。
+            - 有了window.onload就可以将JS代码写到页面元素上方。
+            - window.onload传统注册事件方式==只能写一次==（只加载最后一个）。
+        */
+        window.onload=function(){
+            var btn=window.document.querySelector("button");
+            btn.onclick=function(){
+                alert("呵呵哒！");
+            }
+        }
 
-        // window.addEventListener("load",function(){
-        //     var btn=window.document.querySelector("button");
-        //     btn.onclick=function(){
-        //         alert("aaa！");
-        //     }
-        // })
-        // window.addEventListener("load",function(){
-        //         alert("bbb！");
-        // })
 
-        //仅当DOM加载完成触发函数
-        // document.addEventListener("DOMContentLoaded",function(){
-        //     alert("dddddddd")
-        // })
+        /* 
+            新方式注册可以加载多次
+            window.addEventListener("load",function(){})
+        */
+        window.addEventListener("load",function(){
+            var btn=window.document.querySelector("button");
+            btn.onclick=function(){
+                alert("aaa！");
+            }
+        })
+        window.addEventListener("load",function(){
+                alert("bbb！");
+        })
+
+        /* 
+            document.addEventListener("DOMContentLoaded",function(){})
+            - DOMContentLoaded事件触发时，仅当DOM加载完成。不包括样式表、图片、flash等。
+            - 如果页面图片很多，则用户从访问到onload触发需要较长时间，此时适合用DOMContentLoaded事件。
+        */
     </script>
     <button>点我</button>
 </body>

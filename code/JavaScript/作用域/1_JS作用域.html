@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        //全局作用域
+        var num=30
+        var num=25
+        console.log(num);
+        //局部作用域
+        function fn(){
+            var num=20
+            console.log(num);
+        }
+        fn();
+    </script>
 </head>
 <body>
-    <script>
-        // 顶级对象window
-        console.log(window);
-    </script>
 </body>
 </html>

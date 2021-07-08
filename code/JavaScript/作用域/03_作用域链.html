@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //作用域链：内部函数访问外部函数的变量采取的是链式查找方式来决定取哪个值
+    
+        var num=10
+        function fn1(){
+            var num=20
+            function fn2(){
+                console.log(num)
+            }
+            fn2();
+        }
+        fn1();
+
+        //小案例
+        function fun3(){
+            var num=123
+            function fun4(){
+                console.log(num);//一层层往外找
+            }
+            fun4();
+        }
+
+        var num=555
+        fun3();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
